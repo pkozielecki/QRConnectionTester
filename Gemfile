@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+gem 'cocoapods'
+gem 'xcodeproj'
+gem 'fastlane'
+gem 'soto'
+gem 'gym'
+gem 'rake'
+gem 'xcpretty'
+gem 'git'
+gem 'houston'
+gem 'depcheck'

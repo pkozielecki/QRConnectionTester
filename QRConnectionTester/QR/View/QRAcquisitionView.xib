@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="QRAcquisitionView" customModule="QRConnectionTester" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4JS-ae-UqS" customClass="QRScannerView" customModule="QRConnectionTester" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eY6-Hm-314">
+                    <rect key="frame" x="325" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="EAu-mY-dMn"/>
+                        <constraint firstAttribute="width" constant="50" id="g1u-Ne-0xl"/>
+                    </constraints>
+                    <state key="normal" title="[ x ]"/>
+                    <connections>
+                        <action selector="didTapClosButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="YOn-wW-UOL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4JS-ae-UqS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="B5T-6M-gxp"/>
+                <constraint firstItem="eY6-Hm-314" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="J2g-LA-riy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eY6-Hm-314" secondAttribute="trailing" id="Kev-Sg-KlN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4JS-ae-UqS" secondAttribute="trailing" id="Mmj-aR-zbL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="4JS-ae-UqS" secondAttribute="bottom" id="dqJ-XE-M2m"/>
+                <constraint firstItem="4JS-ae-UqS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="sK9-hU-Ryd"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="scannerView" destination="4JS-ae-UqS" id="ZEK-GA-g0Y"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="137"/>
+        </view>
+    </objects>
+</document>
